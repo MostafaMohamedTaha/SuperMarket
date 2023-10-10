@@ -106,7 +106,7 @@ namespace Super_Market {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Super_Market;V1.0.0.0;component/retrieval.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Super_Market;component/retrieval.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Retrieval.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

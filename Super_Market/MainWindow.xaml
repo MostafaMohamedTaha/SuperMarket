@@ -25,8 +25,8 @@
                 </Border>
                 <Border CornerRadius="25 25 0 0"  Height="230" VerticalAlignment="Top" Background="#FFC8B9EE" Opacity="0.6"></Border>
                 <StackPanel HorizontalAlignment="Center" Margin="0 50 0 0" >
-                    <TextBlock FontSize="50" Foreground="Black" FontFamily="Lucida Calligraphy">WELLCOME</TextBlock>
-                    <TextBlock FontSize="50" HorizontalAlignment="Center" Foreground="Black" FontFamily="Lucida Calligraphy">LOGIN</TextBlock>
+                    <TextBlock FontSize="50" Foreground="#FF9B19D8" FontFamily="Lucida Calligraphy" Text="WELCOME"/>
+                    <TextBlock FontSize="50" HorizontalAlignment="Center" Foreground="#FF9B19D8" FontFamily="Lucida Calligraphy">LOGIN</TextBlock>
                 </StackPanel>
                 <StackPanel VerticalAlignment="Center" Margin="0 60 0 0" >
                     <ComboBox IsReadOnly="True" Name="comboValue" Width="250" Background="#FFE2DBF4" Foreground="Black" Height="30" Text="Select Role" FontSize="17" IsEditable="True"  >

@@ -46,18 +46,8 @@
           }
         }
       },
-      "FontAwesome.WPF/4.7.0.9": {
-        "type": "package",
-        "compile": {
-          "lib/net40/FontAwesome.WPF.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net40/FontAwesome.WPF.dll": {
-            "related": ".xml"
-          }
-        }
+      "FontAwesome/4.7.0": {
+        "type": "package"
       },
       "Humanizer.Core/2.14.1": {
         "type": "package",
@@ -1306,26 +1296,24 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "FontAwesome.WPF/4.7.0.9": {
-      "sha512": "SXE080rnyWMm9Dt0BZzMxh89/o9teuSaqL1N+0O/XM/F/HU8JuZA4XaEKxjBigwZPHHU3/udTa0QMYCHkmH43Q==",
+    "FontAwesome/4.7.0": {
+      "sha512": "n4H/brfszElyoZ4kmGh8E75uqvLzLvFr3h2PFVdPH1LwUmWIpeqdaW2pcC4oZAhg7sESyObh0IZpAI8COCNeUg==",
       "type": "package",
-      "path": "fontawesome.wpf/4.7.0.9",
+      "path": "fontawesome/4.7.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "fontawesome.wpf.4.7.0.9.nupkg.sha512",
-        "fontawesome.wpf.nuspec",
-        "lib/net35/FontAwesome.WPF.dll",
-        "lib/net35/FontAwesome.WPF.xml",
-        "lib/net40/FontAwesome.WPF.dll",
-        "lib/net40/FontAwesome.WPF.xml",
-        "lib/uap10.0/FontAwesome.UWP.XML",
-        "lib/uap10.0/FontAwesome.UWP.dll",
-        "lib/uap10.0/FontAwesome.UWP.pri",
-        "lib/uap10.0/FontAwesome.UWP/FontAwesome.otf",
-        "lib/wp81/FontAwesome.WIN81.dll",
-        "lib/wp81/FontAwesome.WIN81.xml",
+        "Content/Content/font-awesome.css",
+        "Content/Content/font-awesome.min.css",
+        "Content/fonts/FontAwesome.otf",
+        "Content/fonts/fontawesome-webfont.eot",
+        "Content/fonts/fontawesome-webfont.svg",
+        "Content/fonts/fontawesome-webfont.ttf",
+        "Content/fonts/fontawesome-webfont.woff",
+        "Content/fonts/fontawesome-webfont.woff2",
+        "fontawesome.4.7.0.nupkg.sha512",
+        "fontawesome.nuspec",
         "tools/install.ps1"
       ]
     },
@@ -3860,7 +3848,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "FontAwesome.WPF >= 4.7.0.9",
+      "FontAwesome >= 4.7.0",
       "MahApps.Metro.IconPacks.Material >= 4.11.0",
       "MaterialDesignThemes >= 4.7.1",
       "Microsoft.EntityFrameworkCore >= 7.0.3",
@@ -3870,19 +3858,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\saher\\.nuget\\packages\\": {}
+    "C:\\Users\\mostafa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj",
+      "projectUniqueName": "D:\\0p\\084market\\Super_Market\\Super_Market.csproj",
       "projectName": "Super_Market",
-      "projectPath": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj",
-      "packagesPath": "C:\\Users\\saher\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\obj\\",
+      "projectPath": "D:\\0p\\084market\\Super_Market\\Super_Market.csproj",
+      "packagesPath": "C:\\Users\\mostafa\\.nuget\\packages\\",
+      "outputPath": "D:\\0p\\084market\\Super_Market\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\saher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3908,9 +3901,9 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
-          "FontAwesome.WPF": {
+          "FontAwesome": {
             "target": "Package",
-            "version": "[4.7.0.9, )"
+            "version": "[4.7.0, )"
           },
           "MahApps.Metro.IconPacks.Material": {
             "target": "Package",
@@ -3961,17 +3954,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'FontAwesome.WPF 4.7.0.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "FontAwesome.WPF",
-      "targetGraphs": [
-        "net6.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }

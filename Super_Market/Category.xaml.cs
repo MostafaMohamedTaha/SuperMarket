@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Automation;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Super_Market
 {
@@ -21,19 +10,25 @@ namespace Super_Market
     /// </summary>
     public partial class Category : UserControl
     {
+        #region connect to database Category
+
         Context context = new Context();
         public Category()
         {
             InitializeComponent();
             Fill_Combox_WithStore();
         }
+        #endregion
 
+        #region props Category
+
+        //Stores
         private void Fill_Combox_WithStore()
         {
             store_combo.ItemsSource = context.Stors.Where(e => e.IsDelete == false).ToList();
 
         }
-
+        //(Store) store_combo.SelectedItem
         private void store_combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             datagrid.ItemsSource = "";
@@ -47,7 +42,7 @@ namespace Super_Market
             }
 
         }
-
+        //Categorys.Add show in category list
         /* Add */
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -90,13 +85,13 @@ namespace Super_Market
                 }
 
             }
-     
+
             else
             {
                 MessageBox.Show("You Have To Fill The Data First");
             }
         }
-
+        //category update data
         /* Update */
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -123,20 +118,20 @@ namespace Super_Market
                     //if (flag == false)
                     //{
 
-                        cate.Name = CategoryTxt.Text;
-                        context.SaveChanges();
+                    cate.Name = CategoryTxt.Text;
+                    context.SaveChanges();
 
-                        datagrid.ItemsSource = "";
-                        /* Fill Data Grid With Updated Categories*/
-                        Stor stores = (Stor)store_combo.SelectedItem;
-                        IQueryable<List<Categorys>> categories = context.Stors.Where(s => s.Id == stores.Id && s.IsDelete == false).Select(s => s.Categories.Where(e => e.IsDelete == false).ToList());
+                    datagrid.ItemsSource = "";
+                    /* Fill Data Grid With Updated Categories*/
+                    Stor stores = (Stor)store_combo.SelectedItem;
+                    IQueryable<List<Categorys>> categories = context.Stors.Where(s => s.Id == stores.Id && s.IsDelete == false).Select(s => s.Categories.Where(e => e.IsDelete == false).ToList());
 
-                        foreach (List<Categorys> item in categories)
-                        {
-                            datagrid.ItemsSource = item;
-                        }
-                        /* End */
-                        CategoryTxt.Text = " ";
+                    foreach (List<Categorys> item in categories)
+                    {
+                        datagrid.ItemsSource = item;
+                    }
+                    /* End */
+                    CategoryTxt.Text = " ";
                     //}
                     //else
                     //{
@@ -150,7 +145,7 @@ namespace Super_Market
             }
 
         }
-
+        //isDelete=true
         /* Delete */
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
@@ -190,11 +185,10 @@ namespace Super_Market
                 MessageBox.Show("You Have To Select The Category Row First");
             }
         }
-
-
+        //properties
         private void datagrid_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-           Categorys selectedItem = datagrid.SelectedItem as Categorys; 
+            Categorys selectedItem = datagrid.SelectedItem as Categorys;
 
             if (selectedItem != null)
             {
@@ -202,5 +196,6 @@ namespace Super_Market
                 CategoryTxt.Text = properties[1].GetValue(selectedItem).ToString();
             }
         }
+        #endregion
     }
 }

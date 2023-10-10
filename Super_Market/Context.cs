@@ -1,13 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Super_Market
 {
-    public class Context:DbContext
+    public class Context : DbContext
     {
         public DbSet<Stor> Stors { get; set; }
         public DbSet<Categorys> Categorys { get; set; }
@@ -23,7 +19,7 @@ namespace Super_Market
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(" Data Source=DESKTOP-82R2B9J\\SQLEXPRESS; initial catalog = SuperMarket;Integrated Security=True; trust server certificate = true");
+                .UseSqlServer(" Data Source=.; initial catalog = SuperMarket;Integrated Security=True; trust server certificate = true");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -38,7 +34,7 @@ namespace Super_Market
                         UserName = "Ahmed",
                         Password = "12345",
                         Pos = position.Casher,
-                  
+
                      },
                  new Users
                      {
@@ -47,7 +43,7 @@ namespace Super_Market
                         UserName = "Mahmoud",
                         Password = "2555",
                         Pos = position.Casher,
-                  
+
                      },
                  new Users
                  {
@@ -56,7 +52,7 @@ namespace Super_Market
                      UserName = "Kero",
                      Password = "11111",
                      Pos = position.Admin,
-             
+
                  }
             });
 
@@ -69,21 +65,21 @@ namespace Super_Market
                 Id = 1,
                 Name = "johinaa",
                 Phone = "01028574231",
-     
+
                 },
                 new Suppliers
                 {
                  Id = 2,
                 Name = "almraie",
                 Phone = "01055688224",
-          
+
                 },
                 new Suppliers
                 {
                  Id = 3,
                 Name = "atyab",
                 Phone = "0104567432",
-       
+
                 }
             });
 
@@ -95,15 +91,15 @@ namespace Super_Market
                      Id = 1,
                     Name = "store1",
                     Location = "Assiut",
-           
+
                 },
                new Stor{
                  Id = 2,
                 Name = "Store2",
                 Location = "Alex",
-           
+
                 },
-              
+
 
             });
 
@@ -115,18 +111,18 @@ namespace Super_Market
                     Id = 1,
                     Name = "Dairy",
                     StorId = 1,
-            
+
                 },
-               
-              
+
+
                 new Categorys
                 {
                     Id = 2,
                 Name = "protien",
                 StorId = 2,
-            
+
                 },
-               
+
 
             });
             //Products
@@ -143,7 +139,7 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 3, 1),
                     CategorysId= 1,
                     Suppliersid=1,
-              
+
                 },
                 new Proudect
                 {
@@ -156,7 +152,7 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 3, 7),
                     CategorysId = 1,
                     Suppliersid = 1,
-              
+
                 },
                 new Proudect
                 {
@@ -169,7 +165,7 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 2, 1),
                     CategorysId = 1,
                     Suppliersid = 1,
-               
+
                 },
                 new Proudect
                 {
@@ -182,7 +178,7 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 2, 2),
                     CategorysId = 2,
                     Suppliersid = 2,
-                  
+
                 },
                 new Proudect
                 {
@@ -195,7 +191,7 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 5, 1),
                     CategorysId = 2,
                     Suppliersid = 2,
-                
+
                 },
                 new Proudect
                 {
@@ -208,9 +204,9 @@ namespace Super_Market
                     ExpirationDate = new DateTime(2023, 6, 4),
                     CategorysId = 2,
                     Suppliersid = 2,
-                
+
                 },
-                
+
             });
 
         }

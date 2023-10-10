@@ -1,18 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Super_Market
 {
@@ -21,6 +12,8 @@ namespace Super_Market
     /// </summary>
     public partial class Product : UserControl
     {
+        #region connect to database
+
         Context context = new Context();
         public Product()
         {
@@ -28,11 +21,16 @@ namespace Super_Market
             Fillcategory();
             FillSupplierCombox();
         }
+        #endregion
 
+        #region props of product
+
+        //suppliers to list
         private void FillSupplierCombox()
         {
             SupplierCB.ItemsSource = context.suppliers.Where(e => e.IsDelete == false).ToList();
         }
+        //products CategorysId
         private void FillgridWithCustomizedCategory()
         {
             Categorys cate = CateogryCB.SelectedItem as Categorys;
@@ -40,7 +38,7 @@ namespace Super_Market
             datagrid.ItemsSource = products;
         }
 
-
+        //Categories ItemsSource
         private void Fillcategory()
         {
             CateogryCB.ItemsSource = context.Categorys.Where(e => e.IsDelete == false).ToList();
@@ -102,6 +100,7 @@ namespace Super_Market
             }
 
         }
+        //select category Products ItemsSource
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Categorys cate = CateogryCB.SelectedItem as Categorys;
@@ -181,7 +180,7 @@ namespace Super_Market
                 else
                 {
                     MessageBox.Show("Expiration Date must me later than Production Date ");
-                }  
+                }
             }
             else
             {
@@ -240,5 +239,7 @@ namespace Super_Market
         {
             e.Handled = !IsValid(((TextBox)sender).Text + e.Text);
         }
+        #endregion
+
     }
 }

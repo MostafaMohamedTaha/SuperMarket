@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj": {}
+    "D:\\0p\\084market\\Super_Market\\Super_Market.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj": {
+    "D:\\0p\\084market\\Super_Market\\Super_Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj",
+        "projectUniqueName": "D:\\0p\\084market\\Super_Market\\Super_Market.csproj",
         "projectName": "Super_Market",
-        "projectPath": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\Super_Market.csproj",
-        "packagesPath": "C:\\Users\\saher\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saher\\Downloads\\Super Market Project\\Super_Market\\obj\\",
+        "projectPath": "D:\\0p\\084market\\Super_Market\\Super_Market.csproj",
+        "packagesPath": "C:\\Users\\mostafa\\.nuget\\packages\\",
+        "outputPath": "D:\\0p\\084market\\Super_Market\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\saher\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mostafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +44,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
-            "FontAwesome.WPF": {
+            "FontAwesome": {
               "target": "Package",
-              "version": "[4.7.0.9, )"
+              "version": "[4.7.0, )"
             },
             "MahApps.Metro.IconPacks.Material": {
               "target": "Package",

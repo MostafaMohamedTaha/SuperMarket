@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Super_Market
 {
@@ -20,6 +11,8 @@ namespace Super_Market
     /// </summary>
     public partial class Casher : UserControl
     {
+        #region connect to database
+
         public string UserName = "";
         Context context = new Context();
         public Casher(string name)
@@ -28,6 +21,11 @@ namespace Super_Market
             combstor.ItemsSource = context.Stors.Where(e => e.IsDelete == false).ToList();
             UserName = name;
         }
+        #endregion
+
+        #region props of casher
+
+        //category products
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (comcat.SelectedItem != null)
@@ -36,14 +34,14 @@ namespace Super_Market
                 combproduct.ItemsSource = context.proudcts.Where(p => p.category.Id == categor.Id && p.IsDelete == false).ToList();
             }
         }
-
+        //category store
         private void combstor_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var store = (Stor)combstor.SelectedItem;
             comcat.ItemsSource = context.Categorys.Where(e => e.objstor.Id == store.Id && e.IsDelete == false).ToList();
             combproduct.ItemsSource = "";
         }
-
+        // products SellingPrice Quantity DateTime product.Name
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             if (combproduct.SelectedItem != null)
@@ -58,6 +56,7 @@ namespace Super_Market
                 TxtproductName.Text = product.Name;
             }
         }
+        // products AllQuantity QuantityUserEnter ProductName TotalPrice totalafterPrice discount
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (combproduct.SelectedItem != null && TxtproductName.Text != "")
@@ -115,6 +114,7 @@ namespace Super_Market
 
 
         }
+        //QuantityReriveToDatabase Remove lbltoAfter Quantity
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
@@ -146,7 +146,7 @@ namespace Super_Market
             }
 
         }
-
+        //TxtproductName TxtQua TotalAfterDiscount convert discount
         private void SalesDataGraid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (SalesDataGraid.SelectedItem != null)
@@ -171,7 +171,7 @@ namespace Super_Market
                 TxtDis.Text = convertdiscount.ToString();
             }
         }
-
+        //TxtproductName TxtQua Total TotalAfterDiscount valueinDatabase remain lbltoAfter
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             if (SalesDataGraid.SelectedItem != null)
@@ -212,7 +212,7 @@ namespace Super_Market
                 }
             }
         }
-
+        //totalBeforeDis TotalAfterDicount
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             double totalBeforeDis = 0;
@@ -242,7 +242,7 @@ namespace Super_Market
 
             }
         }
-
+        //remain
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
 
@@ -259,6 +259,7 @@ namespace Super_Market
                 MessageBox.Show("the Money less than total", "Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+        //Sell invoices DateTime UsersId RemainingMoney PaidMoney TotalPrice order quantity
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
 
@@ -287,9 +288,8 @@ namespace Super_Market
                     context.SaveChanges();
                 }
                 bon_number.Text = sellinvoce.BonNumberr.ToString();
+
                 if (SalesDataGraid.Items.Count > 0)
-
-
                     SalesDataGraid.Items.Clear();
                 LblRem.Text = "0";
                 lbltotpri.Text = "";
@@ -308,12 +308,13 @@ namespace Super_Market
                 MessageBox.Show("You Must Enter Product first", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        //Minimized
         private void Minimize(object sender, RoutedEventArgs e)
         {
             Window window = Window.GetWindow(this);
             window.WindowState = WindowState.Minimized;
         }
-
+        //Maximize_Minimize
         private void Maximize_Minimize(object sender, RoutedEventArgs e)
         {
             Window window = Window.GetWindow(this);
@@ -326,32 +327,36 @@ namespace Super_Market
                 window.WindowState = WindowState.Maximized;
             }
         }
-
+        //CloseWindow
         private void CloseWindow(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
+        //Numeric only
         private void Numericonly(object sender, TextCompositionEventArgs e)
         {
 
             e.Handled = !IsValid(((TextBox)sender).Text + e.Text);
         }
+        //BonNumriconly
         private void BonNumriconly(object sender, TextCompositionEventArgs e)
         {
 
             e.Handled = !IsValid(((TextBox)sender).Text + e.Text);
         }
+        //IsValid
         public static bool IsValid(string str)
         {
             int i;
             return int.TryParse(str, out i) && i >= 0 && i <= 9999;
         }
-
+        //Close
         private void ListViewItem_Selected(object sender, RoutedEventArgs e)
         {
             MainWindow window = new MainWindow();
             window.Show();
             Window.GetWindow(this).Close();
         }
+        #endregion
     }
 }
