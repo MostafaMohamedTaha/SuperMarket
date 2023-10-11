@@ -357,6 +357,12 @@ namespace Super_Market
             window.Show();
             Window.GetWindow(this).Close();
         }
+
         #endregion
+
+        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

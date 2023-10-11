@@ -8,8 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("backgroundimage.jfif")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("coverr.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("market.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("market.gif")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("final_1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img2.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("supermarket-logo-1.jpg")]

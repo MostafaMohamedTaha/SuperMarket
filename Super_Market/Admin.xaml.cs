@@ -16,8 +16,7 @@ namespace Super_Market
         {
             InitializeComponent();
             UserName = name;
-
-
+            UserWelcome_Label.Content = "  Welcome " + name + "!";
         }
         #endregion
 
@@ -49,10 +48,10 @@ namespace Super_Market
             stores.Content = new Purchase();
         }
         //Report
-        private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
-        {
-            stores.Content = new Report();
-        }
+        //private void ListViewItem_Selected_4(object sender, RoutedEventArgs e)
+        //{
+        //    stores.Content = new Report();
+        //}
         //Retrieval
         private void ListViewItem_Selected_5(object sender, RoutedEventArgs e)
         {

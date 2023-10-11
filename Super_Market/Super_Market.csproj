@@ -8,21 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="backgroundImage.jfif" />
+    <None Remove="market.gif" />
     <None Remove="bac_1.jpg" />
-    <None Remove="coverr.jpg" />
+    <None Remove="market.gif" />
     <None Remove="final_1.png" />
     <None Remove="img2.jpg" />
     <None Remove="img4.png" />
+    <None Remove="marketUser.png" />
     <None Remove="supermarket-logo-1.jpg" />
     <None Remove="super_market.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="backgroundImage.jfif">
+    <Content Include="market.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="coverr.jpg">
+    <Content Include="market.gif">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="final_1.png">
@@ -43,6 +44,7 @@
     <Resource Include="img4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="marketUser.png" />
   </ItemGroup>
 
   <ItemGroup>

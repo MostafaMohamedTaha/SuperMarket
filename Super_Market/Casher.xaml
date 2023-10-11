@@ -6,14 +6,14 @@
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:Super_Market"
              mc:Ignorable="d" 
-             d:DesignHeight="850" d:DesignWidth="1100">
+             d:DesignHeight="850" d:DesignWidth="1100" AllowDrop="True" >
     <Viewbox>
-        <Border CornerRadius="25" Padding="10" >
+        <Border CornerRadius="25" Padding="10" Focusable="True" AllowDrop="True" Height="652">
             <Border.Background>
-                <ImageBrush ImageSource="backgroundImage.jfif"></ImageBrush>
+                <ImageBrush ImageSource="market.gif" Stretch="UniformToFill" TileMode="Tile" ></ImageBrush>
             </Border.Background>
 
-            <Grid Height="600" Width="1100">
+            <Grid Width="1100" Margin="0,17,0,16">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.27*"></ColumnDefinition>
@@ -40,31 +40,71 @@
                     </Button>
                 </StackPanel>
 
-                <Border CornerRadius="0 25 25 25" Margin="-10,6,9,-9" Background="White"  Grid.Column="0" Grid.Row="1">
+                <Border Margin="-10,6,9,-9" Background="White"  Grid.Column="0" Grid.Row="1" CornerRadius="25,25,25,25">
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"></DropShadowEffect>
                     </Border.Effect>
 
-                    <StackPanel Margin="5" VerticalAlignment="Center" >
-                        <Border CornerRadius="25" Background="White" Margin="0 0 0 19">
-
-                            <TextBlock Name="Cashername" Padding="40 0 0 0" Foreground="#FF866AC9" FontWeight="Bold" FontSize="30" Width="210" ></TextBlock>
-
-                        </Border>
+                    <StackPanel Margin="5,5,5,0" VerticalAlignment="Top" Height="146" >
+                        <Border CornerRadius="25" Background="White" Margin="0 0 0 19"/>
                         <ListView >
-                            <ListViewItem Foreground="#FF866AC9" Padding="10"    Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                            <ListView.ItemContainerStyle>
+                                <Style TargetType="{x:Type ListViewItem}">
+                                    <Setter Property="Padding" Value="10"/>
+                                    <Setter Property="Foreground" Value="#FF866AC9"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="White"/>
+
+                                            <Setter Property="Background" Value="BlueViolet"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+
+                            </ListView.ItemContainerStyle>
+                            <ListViewItem x:Name="HomeItem" Selected="ListViewItem_Selected_1" Height="50" >
+                                <ListViewItem.Template>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </ListViewItem.Template>
+                                <StackPanel  Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="Home" FontWeight="Bold"/>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"><Run Text="Home"/></TextBlock>
+                                </StackPanel>
+                            </ListViewItem>
+                            
+                            <!--<ListViewItem Foreground="#FF866AC9" Padding="10"    Style="{StaticResource MaterialDesignNavigationListBoxItem}" Height="64" RenderTransformOrigin="0.49,0.557" Selected="ListViewItem_Selected_1">
                                 <StackPanel  Orientation="Horizontal">
                                     <Icon:PackIconMaterial Width="30" Height="25"  Kind="Home" FontWeight="Bold"></Icon:PackIconMaterial>
                                     <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold">Home</TextBlock>
                                 </StackPanel>
-                            </ListViewItem>
+                            </ListViewItem>-->
 
 
 
-                            <ListViewItem Foreground="#FF866AC9" Selected="ListViewItem_Selected" Padding="10" Margin="0 10 0 0"   VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignNavigationListBoxItem}">
+                            <!--<ListViewItem x:Name="LogoutItem" Foreground="#FF866AC9" Selected="ListViewItem_Selected_1" Padding="10" Margin="0 10 0 0"   VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignNavigationListBoxItem}">
                                 <StackPanel Orientation="Horizontal" >
                                     <Icon:PackIconMaterial Kind="Logout" Width="30" Height="25"/>
                                     <TextBlock Padding="8 0 0 0"  FontSize="18" FontWeight="Bold"><Run Text="Logout"/></TextBlock>
+                                </StackPanel>
+                            </ListViewItem>-->
+
+                            <ListViewItem  x:Name="LogoutItem" Selected="ListViewItem_Selected"  Height="50" >
+                                <ListViewItem.Template>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                            <ContentPresenter VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </ListViewItem.Template>
+                                <StackPanel  Orientation="Horizontal">
+                                    <Icon:PackIconMaterial Width="30" Height="25" Kind="Logout" FontWeight="Bold"/>
+                                    <TextBlock Padding="8 0 0 0" FontSize="18" FontWeight="Bold"><Run Text="Logout"/></TextBlock>
                                 </StackPanel>
                             </ListViewItem>
                         </ListView>
@@ -160,11 +200,11 @@
                                     </StackPanel>
                                     <StackPanel Grid.Column="4">
                                         <Label FontSize="24" Content="Available Quantity"/>
-                                        <TextBox Name="txtTotQua" IsReadOnly="True" HorizontalAlignment="Left" FontSize="30" Width="200"  Background="#FFE2DBF4" ></TextBox>
+                                        <TextBox Name="txtTotQua" IsReadOnly="True" HorizontalAlignment="Left" FontSize="30" Width="200"  Background="#FFC9C4D5" IsEnabled="False" ></TextBox>
                                     </StackPanel>
                                     <StackPanel Grid.Column="4" Grid.ColumnSpan="2" Margin="237,0,0,0">
                                         <Label FontSize="24">Discount %:</Label>
-                                        <TextBox Name="TxtDis" HorizontalAlignment="Left" FontSize="30" Width="180" Background="#FFE2DBF4" ></TextBox>
+                                        <TextBox Name="TxtDis" HorizontalAlignment="Left" FontSize="30" Width="180" Background="#FFC9C4D5" IsEnabled="False" ></TextBox>
                                     </StackPanel>
                                 </Grid>
                                 <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">
@@ -172,7 +212,7 @@
                                     <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click_1">Delete</Button>
                                     <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click_2">Update</Button>
                                     <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click_3">GetTotal</Button>
-                                    <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click_4">GetRemainder</Button>
+                                    <Button Width="224" Height="50" Margin="15" FontSize="28" Click="Button_Click_4">GetRemainder</Button>
                                     <Button Width="150" Height="50" Margin="15" FontSize="28" Click="Button_Click_5">Print</Button>
 
                                 </StackPanel>
