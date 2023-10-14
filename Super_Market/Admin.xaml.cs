@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Super_Market.Models;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Super_Market
@@ -99,4 +100,5 @@ namespace Super_Market
         #endregion
 
     }
+
 }

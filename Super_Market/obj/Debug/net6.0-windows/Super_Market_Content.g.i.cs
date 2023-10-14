@@ -8,10 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("market.gif")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("market.gif")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("final_1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img2.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("supermarket-logo-1.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/market.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/final_1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/img2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/supermarket-logo-1.jpg")]
 
 

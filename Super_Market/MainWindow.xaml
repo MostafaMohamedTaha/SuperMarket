@@ -25,10 +25,10 @@
                     <RowDefinition Height="0*"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Image Source="img4.png" VerticalAlignment="Bottom"  Height="277"  Margin="150 0 0 0" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+                <Image Source="img/img4.png" VerticalAlignment="Bottom"  Height="277"  Margin="150 0 0 0" Grid.RowSpan="2" Grid.ColumnSpan="2" />
                 <Border CornerRadius="25 25 0 0"  Height="230" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2">
                     <Border.Background>
-                        <ImageBrush ImageSource="/img2.jpg"></ImageBrush>
+                        <ImageBrush ImageSource="img/img2.jpg"></ImageBrush>
                     </Border.Background>
                 </Border>
                 <Border CornerRadius="25 25 0 0"  Height="230" VerticalAlignment="Top" Background="#FFC8B9EE" Opacity="0.6" Grid.RowSpan="2" Grid.ColumnSpan="2">

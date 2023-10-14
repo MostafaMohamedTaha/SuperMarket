@@ -13,7 +13,7 @@
 
         <Border  CornerRadius="25" Padding="10" Width="1407" AllowDrop="True" Focusable="True">
             <Border.Background>
-                <ImageBrush  ImageSource="market.gif" TileMode="FlipXY" Stretch="UniformToFill"/>
+                <ImageBrush  ImageSource="img/market.gif" TileMode="FlipXY" Stretch="UniformToFill"/>
             </Border.Background>
 
 
@@ -36,7 +36,7 @@
                 <!--
                 </StackPanel>-->
                 <StackPanel Orientation="Horizontal"  HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="344"  >
-                    <Image Source="supermarket-logo-1.jpg" Height="55" Width="99" RenderTransformOrigin="0.5,0.5">
+                    <Image Source="img/supermarket-logo-1.jpg" Height="55" Width="99" RenderTransformOrigin="0.5,0.5">
                         <Image.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="1"/>
@@ -107,7 +107,7 @@
                             <ListViewItem  Selected="ListViewItem_Selected_7" >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -120,7 +120,7 @@
                             <ListViewItem x:Name="categ" Selected="list_2_Selected" >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -133,7 +133,7 @@
                             <ListViewItem  Selected="ListViewItem_Selected_1">
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -146,7 +146,7 @@
                             <ListViewItem  Selected="ListViewItem_Selected_2"  >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -159,7 +159,7 @@
                             <ListViewItem  Selected="ListViewItem_Selected_5"  >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -172,7 +172,7 @@
                             <ListViewItem  Selected="ListViewItem_Selected_3" >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -185,7 +185,7 @@
                             <!--<ListViewItem  Selected="ListViewItem_Selected_4" >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="ListViewItem">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" 5 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"></ContentPresenter>
                                         </Border>
                                     </ControlTemplate>
@@ -198,7 +198,7 @@
                             <ListViewItem  Margin="0 30 20 0"   Selected="ListViewItem_Selected_6"  VerticalAlignment="Bottom" >
                                 <ListViewItem.Template>
                                     <ControlTemplate TargetType="{x:Type ListViewItem}">
-                                        <Border CornerRadius="0" Width="215" Height="50" Margin=" -4 -2 -8 -2" Background="{TemplateBinding Background}">
+                                        <Border CornerRadius="15" Width="215" Height="50" Margin=" -4 -2 -8 -2" Background="{TemplateBinding Background}">
                                             <ContentPresenter VerticalAlignment="Center"/>
                                         </Border>
                                     </ControlTemplate>
@@ -220,7 +220,7 @@
                     </Image>
                 </ContentControl>
                 <Label x:Name="UserWelcome_Label" Grid.Column="1" Content="" Margin="446,0,0,5" Width="241" HorizontalAlignment="Left" FontSize="18" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#DD7911CE" FontFamily="Rockwell Extra Bold"/>
-                <Image Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="409,10,0,0" VerticalAlignment="Top" Width="37" RenderTransformOrigin="-0.277,0.386" Source="/marketUser.png" Stretch="UniformToFill" UseLayoutRounding="True"/>
+                <Image Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="409,10,0,0" VerticalAlignment="Top" Width="37" RenderTransformOrigin="-0.277,0.386" Source="img/marketUser.png" Stretch="UniformToFill" UseLayoutRounding="True"/>
 
 
             </Grid>

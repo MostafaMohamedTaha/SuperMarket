@@ -10,7 +10,7 @@
     <Viewbox>
         <Border CornerRadius="25" Padding="10" Focusable="True" AllowDrop="True" Height="652">
             <Border.Background>
-                <ImageBrush ImageSource="market.gif" Stretch="UniformToFill" TileMode="Tile" ></ImageBrush>
+                <ImageBrush ImageSource="img/market.gif" Stretch="UniformToFill" TileMode="Tile" ></ImageBrush>
             </Border.Background>
 
             <Grid Width="1100" Margin="0,17,0,16">
@@ -25,8 +25,8 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Image Source="supermarket-logo-1.jpg" Width="55"></Image>
-                    <Label VerticalAlignment="Center" Foreground="DarkBlue" FontWeight="Bold" FontSize="20">Super Market MAKS</Label>
+                    <Image Source="img/supermarket-logo-1.jpg" Width="55"></Image>
+                    <Label VerticalAlignment="Center" Foreground="DarkBlue" FontWeight="Bold" FontSize="20">Super Market ITI</Label>
                 </StackPanel>
                 <StackPanel  Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Right" >
                     <Button Width="28" Height="23" Margin="0 0 8 0" Padding="5" Foreground="#FF866AC9" Click="Minimize" Background="#FFAC91DA">

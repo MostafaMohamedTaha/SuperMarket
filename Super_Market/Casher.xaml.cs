@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Super_Market.Models;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -25,6 +26,13 @@ namespace Super_Market
 
         #region props of casher
 
+        //category store
+        private void combstor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var store = (Stor)combstor.SelectedItem;
+            comcat.ItemsSource = context.Categorys.Where(e => e.objstor.Id == store.Id && e.IsDelete == false).ToList();
+            combproduct.ItemsSource = "";
+        }
         //category products
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -33,13 +41,6 @@ namespace Super_Market
                 Categorys categor = (Categorys)comcat.SelectedItem;
                 combproduct.ItemsSource = context.proudcts.Where(p => p.category.Id == categor.Id && p.IsDelete == false).ToList();
             }
-        }
-        //category store
-        private void combstor_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var store = (Stor)combstor.SelectedItem;
-            comcat.ItemsSource = context.Categorys.Where(e => e.objstor.Id == store.Id && e.IsDelete == false).ToList();
-            combproduct.ItemsSource = "";
         }
         // products SellingPrice Quantity DateTime product.Name
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
@@ -56,7 +57,7 @@ namespace Super_Market
                 TxtproductName.Text = product.Name;
             }
         }
-        // products AllQuantity QuantityUserEnter ProductName TotalPrice totalafterPrice discount
+        // products AllQuantity QuantityUserEnter ProductName TotalPrice totalafterPrice discount (((((((logic)))))))))))))))
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (combproduct.SelectedItem != null && TxtproductName.Text != "")
@@ -114,7 +115,7 @@ namespace Super_Market
 
 
         }
-        //QuantityReriveToDatabase Remove lbltoAfter Quantity
+        //QuantityReriveToDatabase Remove lbltoAfter Quantity (((((((((((((logic remove)))))))))))))))))
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
@@ -146,7 +147,7 @@ namespace Super_Market
             }
 
         }
-        //TxtproductName TxtQua TotalAfterDiscount convert discount
+        //TxtproductName TxtQua TotalAfterDiscount convert discount ((((((((((((((discount))))))))))))))))))
         private void SalesDataGraid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (SalesDataGraid.SelectedItem != null)
@@ -171,7 +172,7 @@ namespace Super_Market
                 TxtDis.Text = convertdiscount.ToString();
             }
         }
-        //TxtproductName TxtQua Total TotalAfterDiscount valueinDatabase remain lbltoAfter
+        //TxtproductName TxtQua Total TotalAfterDiscount valueinDatabase remain lbltoAfter ((((((((((((quantity)))))))))))))))))))))))))
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             if (SalesDataGraid.SelectedItem != null)
@@ -212,7 +213,7 @@ namespace Super_Market
                 }
             }
         }
-        //totalBeforeDis TotalAfterDicount
+        //totalBeforeDis TotalAfterDicount ((((((((((((((((((price after discount)))))))))))))))))))
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             double totalBeforeDis = 0;
@@ -242,7 +243,7 @@ namespace Super_Market
 
             }
         }
-        //remain
+        //remain ((((((((((((((remain money)))))))))))))))))
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
 
@@ -259,7 +260,7 @@ namespace Super_Market
                 MessageBox.Show("the Money less than total", "Alert", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
-        //Sell invoices DateTime UsersId RemainingMoney PaidMoney TotalPrice order quantity
+        //Sell invoices DateTime UsersId RemainingMoney PaidMoney TotalPrice order quantity (((((((((((((print)))))))))))))))
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
 
@@ -360,9 +361,13 @@ namespace Super_Market
 
         #endregion
 
+        #region not important
+
         private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
         {
 
         }
+        #endregion
+
     }
 }

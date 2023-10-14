@@ -1,5 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
 using Microsoft.EntityFrameworkCore;
+using Super_Market.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;

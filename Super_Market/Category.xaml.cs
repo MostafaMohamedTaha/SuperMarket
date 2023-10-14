@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Super_Market.Models;
 
 namespace Super_Market
 {

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using Super_Market.Models;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 

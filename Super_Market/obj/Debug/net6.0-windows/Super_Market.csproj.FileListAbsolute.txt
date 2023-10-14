@@ -1561,9 +1561,6 @@ C:\Users\saher\Downloads\Super Market Project\Super_Market\obj\Debug\net6.0-wind
 C:\Users\saher\Downloads\Super Market Project\Super_Market\obj\Debug\net6.0-windows\Super_Market.csproj.CopyComplete
 C:\Users\saher\Downloads\Super Market Project\Super_Market\obj\Debug\net6.0-windows\Super_Market.genruntimeconfig.cache
 C:\Users\saher\Downloads\Super Market Project\Super_Market\obj\Debug\net6.0-windows\ref\Super_Market.dll
-D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\final_1.png
-D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\img2.jpg
-D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\supermarket-logo-1.jpg
 D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\Super_Market.exe
 D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\Super_Market.deps.json
 D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\Super_Market.runtimeconfig.json
@@ -1620,7 +1617,6 @@ D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\runtimes\win-x86\native\Mi
 D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market.csproj.AssemblyReference.cache
-D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Admin.g.cs
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Casher.g.cs
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Category.g.cs
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\MainWindow.g.cs
@@ -1636,7 +1632,6 @@ D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market_Content.g.cs
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market_MarkupCompile.cache
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market_MarkupCompile.lref
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\App.baml
-D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Admin.baml
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Casher.baml
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Category.baml
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\MainWindow.baml
@@ -1658,4 +1653,9 @@ D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\refint\Super_Market.dll
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market.pdb
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Super_Market.genruntimeconfig.cache
 D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\ref\Super_Market.dll
-D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\market.gif
+D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\img\final_1.png
+D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\img\img2.jpg
+D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\img\market.gif
+D:\0p\084market\Super_Market\bin\Debug\net6.0-windows\img\supermarket-logo-1.jpg
+D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Admin.g.cs
+D:\0p\084market\Super_Market\obj\Debug\net6.0-windows\Admin.baml
